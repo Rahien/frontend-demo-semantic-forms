@@ -1,0 +1,14 @@
+{{page-title "New Person"}}
+<AuToolbar @border="bottom" @size="large" as |Group|>
+  <Group>
+    <AuHeading @skin="2">Add a new Person</AuHeading>
+  </Group>
+</AuToolbar>
+
+<div class="au-o-box">
+  <SemanticForms::NewInstance
+    @onCreate={{this.onCreate}}
+    @form={{@model.form}}
+    @onCancel={{this.onCancel}}
+  />
+</div>{{outlet}}

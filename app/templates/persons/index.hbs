@@ -1,0 +1,69 @@
+{{page-title "Index"}}
+<AuDataTable
+  @content={{@model}}
+  @noDataMessage="No People found"
+  @sort={{this.sort}}
+  @page={{this.page}}
+  @size={{this.size}}
+  as |t|
+>
+  <t.content as |c|>
+    <c.header>
+      <AuDataTableThSortable
+        @field="gebruikteVoornaam"
+        @currentSorting={{this.sort}}
+        @label="First Name"
+      />
+      <AuDataTableThSortable
+        @field="achternaam"
+        @currentSorting={{this.sort}}
+        @label="Last Name"
+      />
+      <AuDataTableThSortable
+        @field="identificator.identificator"
+        @currentSorting={{this.sort}}
+        @label="Identifier"
+      />
+      <AuDataTableThSortable
+        @field="geboorte.datum"
+        @currentSorting={{this.sort}}
+        @label="Birth Date"
+      />
+      <AuDataTableThSortable
+        @field="geslacht.label"
+        @currentSorting={{this.sort}}
+        @label="Gender"
+      />
+      <th></th>
+    </c.header>
+
+    <c.body as |row|>
+      <td>
+        {{row.gebruikteVoornaam}}
+      </td>
+      <td>
+        {{row.achternaam}}
+      </td>
+      <td>
+        {{row.identificator.identificator}}
+      </td>
+      <td>
+        {{moment-format row.geboorte.datum "DD-MM-YYYY"}}
+      </td>
+      <td>
+        {{row.geslacht.label}}
+      </td>
+      <td>
+        <AuLink
+          @skin="button"
+          @route="persons.edit"
+          @model={{row.id}}
+        >Edit</AuLink>
+      </td>
+    </c.body>
+  </t.content>
+</AuDataTable>
+<div class="au-u-padding">
+  <AuLink @skin="button" @route="persons.new">New Person</AuLink>
+</div>
+{{outlet}}

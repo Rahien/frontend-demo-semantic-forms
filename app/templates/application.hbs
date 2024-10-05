@@ -1,7 +1,6 @@
 {{page-title "FrontendDemoSemanticForms"}}
 
-{{!-- The following component displays Ember's default welcome message. --}}
-<WelcomePage />
-{{!-- Feel free to remove this! --}}
-
-{{outlet}}
+<AuBodyContainer @scroll={{true}} class="au-u-padding">
+  <AuModalContainer />
+  {{outlet}}
+</AuBodyContainer>

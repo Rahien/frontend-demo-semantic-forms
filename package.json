@@ -41,6 +41,7 @@
     "ember-cli-dependency-checker": "^3.3.1",
     "ember-cli-htmlbars": "^6.2.0",
     "ember-cli-inject-live-reload": "^2.1.0",
+    "ember-cli-sass": "^11.0.1",
     "ember-cli-sri": "^2.1.1",
     "ember-cli-terser": "^4.0.2",
     "ember-data": "~4.11.3",
@@ -63,11 +64,27 @@
     "prettier": "^2.8.7",
     "qunit": "^2.19.4",
     "qunit-dom": "^2.0.0",
+    "sass": "^1.49.7",
     "stylelint": "^15.4.0",
     "stylelint-config-standard": "^32.0.0",
     "stylelint-prettier": "^3.0.0",
     "tracked-built-ins": "^3.1.1",
     "webpack": "^5.78.0"
+  },
+  "dependencies": {
+    "@appuniversum/ember-appuniversum": "^3.3.0",
+    "@lblod/ember-mock-login": "^0.7.0",
+    "@lblod/ember-submission-form-fields": "~2.22.2",
+    "@lblod/submission-form-helpers": "~2.10.1",
+    "ember-concurrency": "^3.1.1",
+    "ember-moment": "^9.0.0",
+    "ember-power-select": "^7.0.0",
+    "ember-power-select-with-create": "^1.0.0",
+    "ember-resources": "^7.0.2",
+    "ember-simple-auth": "^4.2.1",
+    "moment": "^2.29.1",
+    "moment-timezone": "^0.5.32",
+    "semantic-forms": "https://github.com/lblod/ember-semantic-forms/tarball/dist"
   },
   "engines": {
     "node": "14.* || 16.* || >= 18"
