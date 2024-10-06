@@ -10,8 +10,8 @@ export default class PersonsEditController extends Controller {
   @service router;
 
   @action
-  onRestore(historicalInstance) {
-    this.initialFormTtl.current = historicalInstance.formInstanceTtl;
+  onRestore(_historicalInstance) {
+    this.initialFormTtl.current = null; // TODO wait... but we get a historical instance from somewhere? maybe do something with it?
     this.restoring = true;
   }
 

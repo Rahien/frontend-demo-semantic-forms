@@ -3,25 +3,13 @@
   <AuHeading @level="3" @skin="3">
     Pas Persoon Aan
   </AuHeading>
-  <SemanticForms::Instance
-    @instanceId={{@model.id}}
-    @form={{@model.form}}
-    @onSave={{this.onSave}}
-    @onCancel={{this.onCancel}}
-    @formInitialized={{fn (mut this.formInitialized) true}}
-    @customHistoryMessage={{true}}
-    @initialFormTtl={{this.initialFormTtl}}
-    @saveTitle={{if this.restoring "Zet terug" "Pas aan"}}
-  />
+  TODO: If only we could render a form here to edit a person...
 </div>
 <div class="au-u-margin-top">
   <AuHeading @level="3" @skin="3">
     Historiek
   </AuHeading>
 
-  <SemanticForms::History
-    @instanceId={{@model.id}}
-    @form={{@model.form}}
-    @onRestore={{this.onRestore}}
-  />
+  TODO: Once we have the form, maybe we can show some history and allow the user
+  to view/restore the previous versions of the person.
 </div>

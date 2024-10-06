@@ -1,13 +1,10 @@
 import Route from '@ember/routing/route';
-import { registerCustomFormFields } from '../utils/register-form-fields';
-import { registerCustomValidations } from '../utils/form-validations/register';
 import { service } from '@ember/service';
 
 export default class ApplicationRoute extends Route {
   @service router;
   beforeModel() {
-    registerCustomFormFields();
-    registerCustomValidations();
+    // TODO what do they want us to do here? Something setupy?
   }
 
   afterModel() {

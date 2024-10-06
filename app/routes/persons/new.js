@@ -1,11 +1,8 @@
 import Route from '@ember/routing/route';
-import { service } from '@ember/service';
 
 export default class PersonsNewRoute extends Route {
-  @service semanticFormRepository;
-
   async model() {
-    const form = await this.semanticFormRepository.getFormDefinition('person');
+    const form = null; // TODO this can't be right? there must be some way of getting the form?
 
     return {
       form,
